@@ -1,0 +1,17 @@
+﻿<form method="post" asp-action="Index">
+    <label>Age:</label>
+    <input type="number" name="age" required />
+
+    <label>Game Mode:</label>
+    <select name="gameMode">
+        <option value="casual">Casual</option>
+        <option value="hardcore">Hardcore</option>
+    </select>
+
+    <button type="submit">Calculate</button>
+</form>
+
+@if (ViewBag.Premium != null)
+{
+    <p>Calculated Premium: €@ViewBag.Premium</p>
+}
